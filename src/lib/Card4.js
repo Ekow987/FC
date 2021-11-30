@@ -10,6 +10,7 @@ import {
   HStack,
   Stack,
   NativeBaseProvider,
+  Button
 } from "native-base"
 export const Example = () => {
   return (
@@ -98,6 +99,7 @@ export const Example = () => {
           </HStack>
         </HStack>
       </Stack>
+      <Button style={{backgroundColor:"green"}}>Press Me</Button>
     </Box>
     </View>
   )

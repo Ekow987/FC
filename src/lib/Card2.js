@@ -1,5 +1,6 @@
 import React from "react"
 import {View} from 'react-native';
+import {Button} from "native-base";
 import {
   Box,
   Heading,
@@ -98,6 +99,7 @@ export const Example = () => {
           </HStack>
         </HStack>
       </Stack>
+      <Button style={{backgroundColor:"green"}}>Press Me</Button>
     </Box>
     </View>
   )

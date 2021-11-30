@@ -1,4 +1,5 @@
-import * as React from "react"
+import * as React from "react";
+import { useNavigation } from '@react-navigation/native';
 import {
   Box,
   Text,
@@ -11,11 +12,15 @@ import {
   HStack,
   Center,
   NativeBaseProvider,
-} from "native-base"
+} from "native-base";
+
+
 export const Example = () => {
+  const navigation = useNavigation();
   return (
     <Box safeArea p="2" py="8" w="90%" maxW="290">
       <Heading
+      style={{color:"green"}}
         size="lg"
         fontWeight="600"
         color="coolGray.800"
@@ -23,7 +28,7 @@ export const Example = () => {
           color: "warmGray.50",
         }}
       >
-        Welcome
+        Revcomsys
       </Heading>
       <Heading
         mt="1"
@@ -34,12 +39,12 @@ export const Example = () => {
         fontWeight="medium"
         size="xs"
       >
-        Sign in to continue!
+        Login!
       </Heading>
 
       <VStack space={3} mt="5">
         <FormControl>
-          <FormControl.Label>Email ID</FormControl.Label>
+          <FormControl.Label>Staff ID</FormControl.Label>
           <Input />
         </FormControl>
         <FormControl>
@@ -57,7 +62,7 @@ export const Example = () => {
             Forget Password?
           </Link>
         </FormControl>
-        <Button mt="2" colorScheme="indigo">
+        <Button mt="2" colorScheme="indigo" onPress={()=>{navigation.navigate('Home')}} style={{backgroundColor:"green"}}>
           Login
         </Button>
         <HStack mt="6" justifyContent="center">
@@ -90,7 +95,7 @@ export default () => {
   return (
     <NativeBaseProvider>
       <Center flex={1} px="3">
-        <Example />
+        <Example/>
       </Center>
     </NativeBaseProvider>
   )

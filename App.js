@@ -1,23 +1,21 @@
 import React from "react";
 import 'react-native-gesture-handler';
 import { NavigationContainer } from "@react-navigation/native";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import { NativeBaseProvider } from "native-base";
-import AppStack from "./src/routes/stackRoute";
+import {View} from "react-native";
+import Login from "./src/lib/Login";
 
-export default function App() {
+
+
+export default function App({navigation}) {
   return (
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <NativeBaseProvider>
-         <AppStack />
-        </NativeBaseProvider>
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Login/>
+    </NavigationContainer>
+   
   );
 }
 
-
+{/* */}
 
 
 

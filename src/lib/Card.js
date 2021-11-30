@@ -12,9 +12,9 @@ import {
   Button
 } from "native-base"
 export const Example = ({navigation}) => {
-  const handlepress = ()=>{
-   navigation.navigate('Detail');
-    }
+  // const handlepress = ()=>{
+  //  navigation.navigate('Detail');
+  //   }
   return (
     <Box
       maxW="80"
@@ -99,7 +99,7 @@ export const Example = ({navigation}) => {
           </HStack>
         </HStack>
       </Stack>
-      <Button style={{backgroundColor:"green"}} onPress={handlepress}>Press Me</Button>
+      <Button style={{backgroundColor:"green"}} onPress={()=>{navigation.navigate('Detail')}}>Press Me</Button>
     </Box>
     
     
